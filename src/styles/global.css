@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ink-900 text-paper font-body antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display;
+  }
+
+  ::selection {
+    @apply bg-blue-500/40 text-white;
+  }
+
+  :focus-visible {
+    outline: 2px solid #5B82FF;
+    outline-offset: 3px;
+  }
+}
+
+@layer components {
+  .tag-label {
+    @apply font-mono text-[11px] tracking-[0.2em] uppercase text-blue-400;
+  }
+
+  .corner-bracket {
+    position: relative;
+  }
+  .corner-bracket::before,
+  .corner-bracket::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-color: rgba(91, 130, 255, 0.5);
+  }
+  .corner-bracket::before {
+    top: -1px;
+    left: -1px;
+    border-top: 1.5px solid;
+    border-left: 1.5px solid;
+  }
+  .corner-bracket::after {
+    bottom: -1px;
+    right: -1px;
+    border-bottom: 1.5px solid;
+    border-right: 1.5px solid;
+  }
+}
+
+@layer utilities {
+  @keyframes hero-fade-up {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes hero-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes draw-stroke {
+    from { stroke-dashoffset: 1; }
+    to { stroke-dashoffset: 0; }
+  }
+
+  .hero-in {
+    opacity: 0;
+    animation: hero-fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  .hero-in-fade {
+    opacity: 0;
+    animation: hero-fade-in 0.6s ease-out forwards;
+  }
+  .hero-draw {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: draw-stroke 0.9s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+  }
+
+  @keyframes float-bob {
+    0%, 100% { transform: translateY(0) rotate(var(--rot, 0deg)); }
+    50% { transform: translateY(-18px) rotate(var(--rot, 0deg)); }
+  }
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  @keyframes spin-slow-rev {
+    from { transform: rotate(360deg); }
+    to { transform: rotate(0deg); }
+  }
+
+  .float-bob { animation: float-bob 7s ease-in-out infinite; }
+  .float-bob-slow { animation: float-bob 10s ease-in-out infinite; }
+  .float-bob-fast { animation: float-bob 5s ease-in-out infinite; }
+  .spin-slow { animation: spin-slow 20s linear infinite; }
+  .spin-slow-rev { animation: spin-slow-rev 26s linear infinite; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .float-bob, .float-bob-slow, .float-bob-fast, .spin-slow, .spin-slow-rev {
+    animation: none !important;
+  }
+  [data-parallax] {
+    transform: none !important;
+  }
+
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
