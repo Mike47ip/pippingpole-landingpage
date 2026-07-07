@@ -3,8 +3,8 @@ import FloatingShapes from './FloatingShapes.jsx';
 
 // Replace these with your real profile links — shown at the bottom of
 // each project's expanded view.
-const LINKEDIN_URL = 'https://linkedin.com/in/your-profile';
-const GITHUB_URL = 'https://github.com/your-username';
+const LINKEDIN_URL = 'https://www.linkedin.com/in/michael-darkwah/';
+const GITHUB_URL = 'https://github.com/Mike47ip';
 
 // Each project takes an `images` array. Add as many as you like — the
 // modal will show a slider automatically once there's more than one.
@@ -14,21 +14,21 @@ const PROJECTS = [
     title: 'Hotel Management System',
     desc: 'A full property operations platform for Paradise Royal Hotel — bookings & reservations, front desk, room management, billing, expenses, and bar & store inventory, all in one system.',
     stack: ['React', 'Node.js', 'PostgreSQL'],
-    images: ['/projects/hotel-management.png'],
+    images: ['/projects/hotel-management.png', '/projects/hotel-1.png', '/projects/hotel-2.png'],
   },
   {
     tag: 'RESTAURANT',
     title: 'Restaurant Management System',
     desc: 'A waiter station built for speed on the floor — browse the menu by category, build an order, assign a table, and fire it to the kitchen without missing a step.',
     stack: ['React', 'Real-time sync'],
-    images: ['/projects/restaurant-management.png'],
+    images: ['/projects/restaurant-management.png', '/projects/restaurant-2.png'],
   },
   {
     tag: 'RETAIL',
     title: 'POS System',
     desc: 'A point-of-sale system for fast checkout — smart product search, live stock counts, credit sales, and a running transaction history synced across terminals.',
     stack: ['React', 'Offline-first sync'],
-    images: ['/projects/pos-system.png'],
+    images: ['/projects/pos-system.png', '/projects/post-modal.png', '/projects/pos-dashboard.png'],
   },
   {
     tag: 'HR & OPERATIONS',
