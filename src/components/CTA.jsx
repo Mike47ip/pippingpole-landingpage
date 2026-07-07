@@ -5,7 +5,7 @@ import FloatingShapes from './FloatingShapes.jsx';
 // 2. Go to that form's Settings tab and copy its Endpoint URL
 //    (looks like: https://formspree.io/f/xxxxxxxx)
 // 3. Paste it below, replacing the placeholder.
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORM_ID';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xjkajaaw';
 
 export default function CTA() {
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
