@@ -30,6 +30,25 @@ export default function Footer() {
             A custom software studio building systems tailored to how your
             business actually operates.
           </p>
+
+          <div className="mt-6 flex flex-col gap-2.5">
+            <a
+              href="https://wa.me/233501424150"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-sm text-paper/60 hover:text-white transition-colors w-fit"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-signal" />
+              WhatsApp — +233 50 142 4150
+            </a>
+            <a
+              href="mailto:pippingpole@gmail.com"
+              className="inline-flex items-center gap-2 text-sm text-paper/60 hover:text-white transition-colors w-fit"
+            >
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+              pippingpole@gmail.com
+            </a>
+          </div>
         </div>
 
         {COLUMNS.map((col) => (
